@@ -80,8 +80,7 @@ set_include_path(
     . PATH_SEPARATOR . $config['pear_path']
 );
 
-require_once 'PHPUnit/Autoload.php';
-require_once 'PHPUnit/Util/Log/JSON.php';
+require '../../vendor/autoload.php';
 
 spl_autoload_register(function($class) use ($root) {
     $class = str_replace('\\', '/', $class);
